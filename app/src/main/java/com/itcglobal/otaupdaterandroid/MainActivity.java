@@ -16,8 +16,8 @@ import android.view.View;
 import android.widget.TextView;
 import android.widget.Toast;
 
+import com.itcglobal.getapk.DownloadApk;
 import com.itcglobal.updaterlib.AppUpdater;
-import com.itcglobal.updaterlib.DownloadApk;
 import com.itcglobal.updaterlib.UpdateListener;
 import com.itcglobal.updaterlib.UpdateModel;
 
@@ -49,6 +49,34 @@ public class MainActivity extends AppCompatActivity {
                                     Intent browserIntent = new Intent(Intent.ACTION_VIEW, Uri.parse(updateModel.getUrl()));
                                     startActivity(browserIntent);
                                     finish();
+                                }
+                            })
+                            .show();
+                }
+            }
+
+            @Override
+            public void onError(String error) {
+                // Do something
+            }
+        }).execute();
+
+
+        new AppUpdater(this, "https://raw.githubusercontent.com/ismailukman/SomeHowTosAndTexts/master/Updater/updater.json", new UpdateListener() {
+            @Override
+            public void onJsonDataReceived(final UpdateModel updateModel, JSONObject jsonObject) {
+                if (AppUpdater.getCurrentVersionCode(MainActivity.this) < updateModel.getVersionCode()) {
+                    new AlertDialog.Builder(MainActivity.this)
+                            .setTitle("Update available")
+                            .setCancelable(updateModel.isCancellable())
+                            .setPositiveButton("Update", new DialogInterface.OnClickListener() {
+                                @Override
+                                public void onClick(DialogInterface dialog, int which) {
+                                    DownloadApk downloadApk = new DownloadApk(MainActivity.this);
+                                    downloadApk.startDownloadingApk("https://github.com/Piashsarker/AndroidAppUpdateLibrary/raw/master/app-debug.apk", "Update 2.0");
+                                    //Intent browserIntent = new Intent(Intent.ACTION_VIEW, Uri.parse(updateModel.getUrl()));
+                                    //startActivity(browserIntent);
+                                    //finish();
                                 }
                             })
                             .show();
@@ -110,7 +138,7 @@ public class MainActivity extends AppCompatActivity {
 
 
 
-    public void download(View view) {
+    public void button(View view) {
         // First check the external storage permission
         checkWriteExternalStoragePermission();
     }
