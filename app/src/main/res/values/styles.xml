@@ -1,0 +1,126 @@
+<resources>
+
+    <!-- Base application theme. -->
+    <style name="AppTheme" parent="Theme.AppCompat.Light.DarkActionBar">
+        <!-- Customize your theme here. -->
+        <item name="colorPrimary">#09B485</item>
+        <item name="colorPrimaryDark">#078764</item>
+        <item name="colorAccent">@color/colorAccent</item>
+    </style>
+
+    <style name="AppTheme.NoActionBar">
+        <item name="windowActionBar">false</item>
+        <item name="windowNoTitle">true</item>
+    </style>
+
+    <style name="AppTheme.AppBarOverlay" parent="ThemeOverlay.AppCompat.Dark.ActionBar" />
+    <style name="SplashTheme" parent="Theme.AppCompat.NoActionBar">
+
+    </style>
+    <style name="AppTheme.PopupOverlay" parent="ThemeOverlay.AppCompat.Light" />
+
+    <style name="EditText.OutlinedBox" parent="Theme.MaterialComponents.Light">
+        <item name="android:minHeight">45dp</item>
+        <item name="android:textSize">16sp</item>
+        <item name="hintEnabled">true</item>
+        <item name="android:textColorHint">#000000</item>
+        <item name="hintTextColor">#DD0C6728</item>
+        <item name="android:maxLines">1</item>
+        <item name="android:singleLine">true</item>
+        <item name="colorPrimary">@color/colorPrimaryDark</item>
+        <item name="colorPrimaryDark">@color/colorPrimaryDark</item>
+        <item name="colorAccent">@color/colorAccent</item>
+
+        <!-- ActionBar title text -->
+        <item name="windowActionBar">true</item>
+        <item name="windowNoTitle">true</item>
+
+    </style>
+
+    <style name="HomeTheme" parent="Theme.MaterialComponents.Light">
+
+        <item name="android:minHeight">45dp</item>
+        <item name="android:textSize">16sp</item>
+        <item name="hintEnabled">true</item>
+        <item name="android:textColorHint">#FFFEFE</item>
+        <item name="hintTextColor">#DD0C6728</item>
+        <item name="colorPrimary">#09B485</item>
+        <item name="colorPrimaryDark">#078764</item>
+        <item name="colorAccent">#09B485</item>
+        <!-- ActionBar title text -->
+        <item name="windowActionBar">true</item>
+        <item name="windowNoTitle">true</item>
+    </style>
+
+    <style name="myShapeAppearance" >
+        <item name="cornerSize">4dp</item>
+        <item name="cornerFamily">rounded</item>
+        <item name="textAllCaps">false</item>
+    </style>
+
+    <style name="paymentTime" >
+        <item name="cornerSize">8dp</item>
+        <item name="cornerFamily">rounded</item>
+        <item name="textAllCaps">false</item>
+        <item name="android:background">@color/amber</item>
+        <item name="boxCornerRadiusBottomStart">20dp</item>
+        <item name="boxCornerRadiusTopStart">20dp</item>
+        <item name="boxCornerRadiusBottomEnd">20dp</item>
+        <item name="boxCornerRadiusTopEnd">20dp</item>
+        <item name="borderWidth">10dp</item>
+        <item name="boxStrokeColor">@color/black</item>
+    </style>
+
+    <style name="myOutlineButton"  >
+        <item name="cornerSize">5dp</item>
+        <item name="cornerFamily">rounded</item>
+        <item name="backgroundColor">@color/white</item>
+        <item name="strokeWidth">4dp</item>
+        <item name="strokeColor">@color/black</item>
+    </style>
+
+    <style name="Widget.App.OutlinedButton" parent="Widget.MaterialComponents.Button.OutlinedButton">
+        <item name="materialThemeOverlay">@style/ThemeOverlay.App.OutlinedButton</item>
+        <item name="android:textAppearance">@style/TextAppearance.App.Button</item>
+        <item name="shapeAppearance">@style/ShapeAppearance.App.SmallComponent</item>
+    </style>
+
+    <style name="ThemeOverlay.App.OutlinedButton" parent="">
+        <item name="colorPrimary">#311B92</item>
+        <item name="colorOnPrimary">#121212</item>
+        <item name="strokeColor">#121212</item>
+    </style>
+
+    <style name="ThemeOverlay.App.TextButton" parent="">
+        <item name="colorPrimary">#A33333</item>
+        <item name="colorOnPrimary">#121212</item>
+    </style>
+
+    <style name="TextAppearance.App.Button" parent="TextAppearance.MaterialComponents.Button">
+        <item name="android:textColor">#f43434</item>
+    </style>
+
+    <style name="ShapeAppearance.App.SmallComponent" parent="ShapeAppearance.MaterialComponents.SmallComponent">
+        <item name="cornerFamily">cut</item>
+        <item name="cornerSize">8dp</item>
+    </style>
+
+    <style name="ButtonStyleTextColor" parent="@style/Widget.MaterialComponents.Button">
+        <!-- For filled buttons, your theme's colorPrimary provides the default background color of the component, and -->
+        <!--the text color is colorOnPrimary -->
+        <item name="colorOnPrimary">@color/white</item>
+    </style>
+
+    <style name="SpinnerItem" parent="@android:style/Widget.TextView.SpinnerItem">
+        <item name="android:textColor">@color/black</item>
+        <item name="android:padding">10dp</item>
+    </style>
+
+    <style name="SpinnerItem.DropDownItem" parent="@android:style/Widget.DropDownItem.Spinner">
+        <item name="android:textColor">@color/white</item>
+        <item name="android:padding">10dp</item>
+    </style>
+
+
+
+</resources>
